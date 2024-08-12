@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Coca Cola | Taste the Feeling</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Construction Html5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+  
+  <link rel="stylesheet" href="plugins/style-font/style.css">
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  
+  <!-- Animate css -->
+  <link rel="stylesheet" href="plugins/animate/animate.css">
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+  <!-- x3dom server files -->
+  <script type="text/javascript" src="js2/x3dom.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/x3dom.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap links -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" >
+
+</head>
+
+<body id="body">
+
+
+<!-- Start Top Header Bar -->
+<section class="top-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-xs-12 col-sm-4">
+			</div>
+			<div class="col-md-4 col-xs-12 col-sm-4">
+				<!-- Site Logo -->
+				<div class="logo text-center">
+						<a class="navbar-brand" href="index.html">
+							<div>
+								<span class="cola modify">Coca Cola</span>
+								<span class="journey modify">Journey</span>
+								<div class="rem-logo modify"><br>Taste the Feeling</div>
+							</div>
+						</a>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-12 col-sm-4">
+			</div>
+		</div>
+	</div>
+</section><!-- End Top Header Bar -->
+
+
+
+
+<!-- Main Menu Section -->
+<section class="menu">
+	<nav class="navbar navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<h2 class="menu-title">Main Menu</h2>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+					aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+			</div><!-- / .navbar-header -->
+
+			<!-- Navbar Links -->
+			<div id="navbar" class="navbar-collapse collapse text-center">
+				<ul class="nav navbar-nav">
+
+					<!-- Home -->
+					<li class="dropdown ">
+						<a href="index.html">Home</a>
+					</li><!-- / Home -->
+
+					<!-- Home -->
+					<li class="dropdown ">
+						<a href="shop.html">Drinks</a>
+					</li><!-- / Home -->
+
+					<!-- Home -->
+					<li class="dropdown ">
+						<a href="about.html">About</a>
+					</li><!-- / Home -->
+
+					<!-- Home -->
+					<li class="dropdown ">
+						<a href="contact.html">Contact</a>
+					</li><!-- / Home -->
+
+
+				</ul><!-- / .nav .navbar-nav -->
+
+			</div>
+			<!--/.navbar-collapse -->
+		</div><!-- / .container -->
+	</nav>
+</section>
+
+
+<section class="page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="content">
+					<h1 class="page-name">Shop</h1>
+					<ol class="breadcrumb">
+						<li><a href="index.html">Home</a></li>
+						<li class="active">shop</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<main class="mb-5">
+    <div class="container can-container">
+      <div class="row">
+        <div class="col can-veiwer-container">
+          <div class="can-viewer" style="width: 100%; height: 300px;">
+            <X3D width="100%" height="300px" id="scene">
+                <Scene>
+                    <Viewpoint id="front-camera" position="0 0 10" orientation="0 0 1 0" fieldOfView="0.5"></Viewpoint>
+                    <Background skyColor='0.1 0.1 0.1'></Background>
+                    <DirectionalLight direction='1 1 1' intensity='0.5'></DirectionalLight>
+                    <DirectionalLight direction='1 -1 1' intensity='0.5'></DirectionalLight>
+                    <DirectionalLight direction='-1 1 -1' intensity='0.5'></DirectionalLight>
+                    <!-- Placeholder for 3D models -->
+                    <Transform id="modelTransform" translation="0 1.5 0" scale="0.3 0.3 0.3" rotation="0 1 0 1.5">
+                        <Inline id="model" nameSpaceName="model" mapDEFToID="true" url="" render="true"></Inline>
+                    </Transform>
+                    <!-- (0 1.5 0)(0.3 0.3 0.3)  -->
+                </Scene>
+            </X3D>
+        </div>
+        <div class="form-floating mt-40">
+          <select style="font-size: 18px;height: 50px;" class="form-select" aria-label="Default select example">
+            <option selected data-model-name="">Select a Can</option>
+            <option value="1" data-model-name="cocacola">Coca Cola</option>
+            <option value="2" data-model-name="sprite">Sprite</option>
+            <option value="3" data-model-name="drpepper">Dr Pepper</option>
+            <option value="4" data-model-name="cokebottle">Fanta Bottle</option>
+          </select>
+          <label for="form-select">Select Can:</label>
+        </div>
+        
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="descriptionTextarea" style="height: 220px;" readonly></textarea>
+          <label for="descriptionTextarea">Description</label>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+  <footer class="footer section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="social-media">
+            <li>
+              <a href="https://www.facebook.com/">
+                <i class="tf-ion-social-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/">
+                <i class="tf-ion-social-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com/">
+                <i class="tf-ion-social-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.com/">
+                <i class="tf-ion-social-pinterest"></i>
+              </a>
+            </li>
+          </ul>
+          <ul class="footer-menu text-uppercase">
+            <li>
+              <a href="contact.html">CONTACT</a>
+            </li>
+            <li>
+              <a href="shop.html">Drinks</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <a href="contact.html">PRIVACY POLICY</a>
+            </li>
+          </ul>
+          <p class="copyright-text">These web pages are submitted as part requirement for the degree of Masters in Computing with Digital Media at the University of Sussex.
+            They are the product of my own labour except where indicated in the web page content. These web pages or contents may be freely copied and distributed provided the source is acknowledged.
+          </p>
+          <h4 class="text-left mt-20">References:</h4>
+          <p class="copyright-text text-left">
+            • Bootstrap concept is taken from <a href="https://demo.themefisher.com/aviato-bootstrap/">Themefisher Aviato Bootstrap Demo</a><br>
+            • Slider 2 image is taken from <a href="https://unsplash.com/photos/coca-cola-plastic-bottle-on-white-textile-uaNoIlReiWc">Unsplash Coca-Cola Plastic Bottle</a><br>
+            • Slider 3 image is taken from <a href="https://unsplash.com/photos/a-can-of-coca-cola-being-poured-into-a-cup-CQk19Ru-Aac">Unsplash Coca-Cola Being Poured</a><br>
+            • Fanta Bottle image is taken from <a href="https://dribbble.com/shots/14071948-Fanta">Dribbble Fanta Design</a><br>
+            • About image is taken from <a href="https://www.peakpx.com/en/hd-wallpaper-desktop-ahldz">Peakpx HD Wallpaper</a><br>
+            • History image is taken from <a href="https://www.clickinsights.asia/post/how-coca-cola-used-snapchat-to-drive-its-brand-favorability-across-three-countries">ClickInsights Coca-Cola Snapchat Campaign</a><br>
+            • Sprite history image is taken from <a href="https://www.pngwing.com/en/free-png-zcdan">PNGWing Sprite Image</a><br>
+            • Coca Cola history image is taken from <a href="https://www.pinterest.com/pin/coca-cola--599963981631724626/">Pinterest Coca-Cola Image</a><br>
+            • Dr Pepper history image is taken from <a href="https://www.anyrgb.com/en-clipart-ontab">AnyRGB Dr Pepper Clipart</a><br>
+            • Coca Cola font is taken from <a href="https://www.dafont.com/loki-cola.font">DaFont Loki Cola Font</a>
+          </p>
+  
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+    
+    <!-- Main jQuery -->
+    <script src="plugins/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.1 -->
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Touchpin -->
+    <script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+    <!-- Instagram Feed Js -->
+    <script src="plugins/instafeed/instafeed.min.js"></script>
+    <!-- Video Lightbox Plugin -->
+    <script src="plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+    <!-- Count Down Js -->
+    <script src="plugins/syo-timer/build/jquery.syotimer.min.js"></script>
+
+    <!-- slick Carousel -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/slick/slick-animation.min.js"></script>
+
+    <!-- Google Mapl -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+    <script type="text/javascript" src="plugins/google-map/gmap.js"></script>
+
+    <!-- Main Js File -->
+    <script src="js2/script.js"></script>
+    <script src="js2/jquery-3.6.0.min.js"></script>
+	<!-- <script src="plugins/bootstrap/js/bootstrap.min.js"></script> -->
+	<script src="js2/script.js"></script>
+	<script src="js2/bootstrap.bundle.min.js"></script>
+
+
+
+  </body>
+  </html>
